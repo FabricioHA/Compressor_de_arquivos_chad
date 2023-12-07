@@ -3,33 +3,22 @@ body, html
     height: 100%;
 }
 
-.back_chad_left
-{
-    background-position-x: left;
-}
+/*Esconder Scrollbar inicio*/
+::-webkit-scrollbar{display: none;}
+/*Esconder Scrollbar inicio*/
+
+/*Background inicio*/
 .background_img
 {
-    background-image: url("../Assets/chad_ground.jpg");
+    background-image: url(../Assets/chad_ground.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.back_chad_right
-{
-    background-position-x: right;
-}
-.ajust_container_chad 
-{
-    margin: 0 auto;
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 1;
-    position: relative;
-    background-color: white;
-    border-radius: 0%;
-    max-width: 800px;
-    height:  100%;
-}
+/*Background fim*/
+
+
+/*Botões inicio*/
 .chad_button_opition
 {
     background-color: #6d6d6d;
@@ -50,5 +39,114 @@ body, html
     border: 1px solid #6d6d6d;
     color: black;
 }
+.chad_button_opition:active
+{
+    position: relative;
+    transition: 0.01s;
+    color: white;
+}
+/*Botões fim*/
 
-/*Biblioteca_pessoal_de_alinhamento de elementos*/
+
+/*Editar Texto inicio*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+.chad_title_top
+{
+    font-size: 30px;
+    font-family: 'Inter';
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+.chad_title_bottom
+{
+    font-size: 40px;
+    font-family: 'Inter';
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    color: #000;
+}
+.chad_reference_title_botton
+{
+    font-size: 20px;
+    font-family: 'Inter';
+    font-weight: bold;
+    font-style: italic;
+    text-align: right;
+    color: #000;
+}
+/*Editar Texto fim*/
+
+
+/*Alinhar colunas e linhas inicio*/
+.container_chad 
+{
+    margin: 0 auto;
+    display: grid;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+    background-color: #fff;
+    border-radius: 0%;
+    max-width: 800px;
+    height:  100%;
+    grid-template-columns: auto auto;
+    column-gap: 200px;
+    row-gap: 1px;
+    padding: 5px;
+    grid-template-rows: 100px 200px 100px 110px 30px;
+}
+
+.item_grid_chad_centered
+{
+    display: grid; /*Define como será seu layout*/
+    place-items: center; /*como os elementos serão alinhados*/
+    grid-column-start: 1;/*Ponto Onde a coluna começa*/
+    grid-column-end: 3;/*Onde a coluna termina*/
+}
+.item_grid_chad_centered_for_right
+{
+    display: grid; /*Define como será seu layout*/
+    place-items: center; /*como os elementos serão alinhados*/
+    justify-items: right;
+    grid-column-start: 1;/*Ponto Onde a coluna começa*/
+    grid-column-end: 3;/*Onde a coluna termina*/
+}
+.item_grid_chad_centered_for_right_center
+{
+    display: grid; /*Define como será seu layout*/
+    place-items: center; /*como os elementos serão alinhados*/
+    justify-items: right;
+    grid-column-start: 1;/*Ponto Onde a coluna começa*/
+    grid-column-end: 3;/*Onde a coluna termina*/
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.item_grid_chad_centered_for_botton
+{
+    display: grid; /*Define como será seu layout*/
+    place-items: center; /*como os elementos serão alinhados*/
+    align-items: end;
+    justify-items: center;
+    grid-column-start: 1;/*Ponto Onde a coluna começa*/
+    grid-column-end: 3;/*Onde a coluna termina*/
+}
+
+.item_grid_chad_left
+{
+    display: grid; /*Define como será seu layout*/
+    place-items: center; /*Onde os elementos estarão*/
+    justify-items: right; /*como os elementos serão alinhados*/
+    grid-column-start: 1;/*Ponto Onde a coluna começa*/
+    grid-column-end: 2;/*Ponto Onde a coluna termina*/
+}
+.item_grid_chad_right
+{
+    display: grid; /*Define como será seu layout*/
+    place-items: center; /*Onde os elementos estarão*/
+    justify-items: left; /*como os elementos serão alinhados*/
+    grid-column-start: 2;/*Ponto Onde a coluna começa*/
+    grid-column-end: 3;/*Ponto Onde a coluna termina*/
+}
+/*Alinhar colunas e linhas fim*/
