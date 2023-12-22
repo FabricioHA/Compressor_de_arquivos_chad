@@ -11,6 +11,7 @@ body, html
 .background_img
 {
     background-image: url(../Assets/chad_ground.jpg);
+    background-color: blue;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -114,11 +115,23 @@ body, html
     text-align: right;
     color: #000;
 }
+.chad_form_text
+{   
+    font-size: 12px;
+    font-family: 'Inter';
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    color: #fff;
+}
 /*Editar Texto fim*/
 
 
 /*Alinhar colunas e linhas inicio*/
-.container_chad 
+
+
+/*Inicio containers e número de colunas*/
+.container_chad, .two_collums, .three_collums
 {
     margin: 0 auto;
     display: grid;
@@ -129,12 +142,20 @@ body, html
     border-radius: 0%;
     max-width: 800px;
     height:  100%;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     column-gap: 200px;
     row-gap: 1px;
     padding: 5px;
-    grid-template-rows: 100px 200px 100px 110px 30px;
+    grid-template-rows: auto auto auto auto auto;
 }
+.one_collums{grid-template-columns: auto;}
+
+.two_collums{grid-template-columns: auto auto;}
+
+.three_collums{grid-template-columns: auto auto auto;}
+
+/*Fim containers e número de colunas*/
+
 
 .item_grid_chad_centered
 {
@@ -151,7 +172,7 @@ body, html
     grid-column-start: 1;/*Ponto Onde a coluna começa*/
     grid-column-end: 3;/*Onde a coluna termina*/
 }
-.item_grid_chad_centered_for_right_center
+.item_grid_chad_centered_for_right_center, .chad_itens_align_end
 {
     display: grid; /*Define como será seu layout*/
     place-items: center; /*como os elementos serão alinhados*/
@@ -171,7 +192,7 @@ body, html
     grid-column-end: 3;/*Onde a coluna termina*/
 }
 
-.item_grid_chad_left
+.item_grid_chad_left_itens_right
 {
     display: grid; /*Define como será seu layout*/
     place-items: center; /*Onde os elementos estarão*/
@@ -179,7 +200,24 @@ body, html
     grid-column-start: 1;/*Ponto Onde a coluna começa*/
     grid-column-end: 2;/*Ponto Onde a coluna termina*/
 }
-.item_grid_chad_right
+.item_grid_chad_left_itens_left
+{
+    display: grid;
+    place-items: center;
+    justify-items: left;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.item_grid_chad_right_itens_right
+{
+    display: grid;
+    place-items: center;
+    justify-items: right;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.item_grid_chad_right_itens_left
 {
     display: grid; /*Define como será seu layout*/
     place-items: center; /*Onde os elementos estarão*/
@@ -192,4 +230,17 @@ body, html
     justify-self: start;
     align-self: center;
 }
+.chad_itens_align_center{align-items: center;}
+.chad_itens_align_end{align-items: baseline;}
 /*Alinhar colunas e linhas fim*/
+
+
+.chad_box
+{
+    width: 500px;
+    height: 500px;
+    background-color: #6d6d6d;
+    border-radius: 6px;
+    display: block;
+    padding: 1.25rem;
+}
