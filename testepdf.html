@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Compatibilade de navegadores-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--Estilo CSS-->
+        <link rel="stylesheet" href="CSS/style.css">
+
+        <!--Titulo-->
+        <title>teste converter PDF</title>
+    </head>
+    <body>
+        <form>
+            <label for="nomeArq">Selecione o PDF: </label>
+            <input type="file" accept=".pdf" id="nomeArq"><br>
+            <label for="AltNome">Alterar Nome:</label>
+            <input type="text" id="AltNome"><br>
+            <label for="sizePx">Tamanho do arquivo (pixels):</label>
+            <input type="text" maxlength="3" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">px(s)<br>
+            <label for="colorPDF">Estilo das páginas</label>
+            <select id="colorPDF">
+                <option>Escolha</option>
+                <option id="BanW">Preto e branco</option>
+                <option id="colored">Colorido</option>
+            </select>
+        </form>
+    </body>
+</html>
